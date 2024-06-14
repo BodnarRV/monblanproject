@@ -1,0 +1,99 @@
+/* 
+ * Large screen styles
+ */
+@media screen and (min-width: 1200px) {
+    body::after {
+        content: ''
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .posts-wrapper_grid-mode .post {
+        width: calc(33.3333% - 16px / 3);
+    }
+}
+
+/* 
+ * Mobile styles
+ */
+@media screen and (max-width: 767px) {
+    .container_header::before,
+    .container_header::after {
+        display: none;
+    }
+
+    .container_header {
+        padding: 6px 20px 28px;
+        gap: 10px;
+    }
+
+    .header__content-wrapper {
+        margin: 29px 0 0;
+    }
+
+    .header__content-section {
+        flex-wrap: wrap;
+    }
+
+    .header__logo {
+        width: 100px;
+    }
+
+    .post {
+        gap: 20px;
+    }
+
+    .post__info {
+        padding: 16px 20px 27px 0;
+    }
+
+    .post__like, 
+    .post__comment, 
+    .post__uploaded-date {
+        margin-right: 5px;
+    }
+
+    .posts-wrapper_grid-mode .post {
+        width: calc(50% - 4px);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .container_header {
+        flex-direction: column;
+    }
+    
+    .header__content-section {
+        justify-content: center;
+    }
+
+    .header__calendar-label {
+        display: none;
+    }
+
+    .header__calendar-wrapper,
+    .header__calendar-wrapper:last-child {
+        margin: 0 5px;
+    }
+
+    .post__like, .post__comment, 
+    .post__uploaded-date {
+        display: block;
+    }
+
+    .post__info {
+        flex-wrap: wrap;
+        gap: 24px 20px;
+    }
+
+    .posts-wrapper_grid-mode .post__upload-date {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .post__interactions-date, 
+    .post__status {
+        font-size: 14px;
+    }
+}
